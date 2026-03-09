@@ -41,6 +41,41 @@ Core capabilities:
 - moderation workflows
 - monitoring and observability
 
+
+
+## System Architecture
+
+```mermaid
+flowchart LR
+
+User[User]
+
+UI[PDP UI<br/>React + TypeScript]
+
+API[PDP Backend Platform<br/>Spring Boot]
+
+DB[(PostgreSQL)]
+
+AI[PDP AI Signal Service<br/>Fastify + TypeScript]
+
+LLM[LLM Providers<br/>OpenAI / Ollama]
+
+OBS[Observability<br/>Prometheus + Grafana]
+
+User --> UI
+
+UI --> API
+
+API --> DB
+
+API --> AI
+
+AI --> LLM
+
+API --> OBS
+```
+
+
 ### Architecture Overview
 
 Client
