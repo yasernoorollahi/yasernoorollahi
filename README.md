@@ -25,6 +25,87 @@ TypeScript • Fastify • React • Vite
 Prometheus • Grafana • Redis
 
 ---
+## AI Processing Pipeline
+
+```mermaid
+flowchart LR
+
+%% CLIENT LAYER
+User((User))
+
+UI[Client UI<br/>React + Vite]
+
+Dashboard[User Dashboard]
+
+Chat[Chat Interface]
+
+%% BACKEND
+API[PDP Backend<br/>Spring Boot]
+
+%% JOB 1
+ClassifyJob[Job 1<br/>Message Classification]
+
+%% JOB 2
+AIService[PDP AI Signal Service]
+
+Facts[Facts API]
+
+Intents[Intents API]
+
+Entities[Entities API]
+
+Tone[Tone API]
+
+Topics[Topics API]
+
+%% JOB 3
+NormalizeJob[Job 3<br/>Data Normalization]
+
+%% DATABASE
+DB[(PostgreSQL)]
+
+User --> UI
+UI --> Dashboard
+Dashboard --> Chat
+
+Chat --> API
+
+API --> ClassifyJob
+
+ClassifyJob -->|valuable message| AIService
+ClassifyJob -->|discard| API
+
+AIService --> Facts
+AIService --> Intents
+AIService --> Entities
+AIService --> Tone
+AIService --> Topics
+
+Facts --> NormalizeJob
+Intents --> NormalizeJob
+Entities --> NormalizeJob
+Tone --> NormalizeJob
+Topics --> NormalizeJob
+
+NormalizeJob --> DB
+
+
+%% COLORS
+
+classDef client fill:#dbeafe,stroke:#1e40af,color:#000
+classDef backend fill:#e9d5ff,stroke:#6b21a8,color:#000
+classDef ai fill:#dcfce7,stroke:#166534,color:#000
+classDef job fill:#fde68a,stroke:#92400e,color:#000
+classDef db fill:#fecaca,stroke:#991b1b,color:#000
+
+class User,UI,Dashboard,Chat client
+class API backend
+class ClassifyJob,NormalizeJob job
+class AIService,Facts,Intents,Entities,Tone,Topics ai
+class DB db
+```
+
+
 
 # Featured Projects
 
