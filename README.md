@@ -25,84 +25,48 @@ TypeScript • Fastify • React • Vite
 Prometheus • Grafana • Redis
 
 ---
-## AI Processing Pipeline
+## AI Signal Processing Pipeline
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-%% CLIENT LAYER
-User((User))
+Chat[User Chat Message]
 
-UI[Client UI<br/>React + Vite]
+Classify[Message Value Classification]
 
-Dashboard[User Dashboard]
+Extract[AI Signal Extraction Service]
 
-Chat[Chat Interface]
+Facts[Facts Extraction]
 
-%% BACKEND
-API[PDP Backend<br/>Spring Boot]
+Intents[Intent Detection]
 
-%% JOB 1
-ClassifyJob[Job 1<br/>Message Classification]
+Entities[Entity Recognition]
 
-%% JOB 2
-AIService[PDP AI Signal Service]
+Tone[Tone Analysis]
 
-Facts[Facts API]
+Aggregate[Structured Signal JSON]
 
-Intents[Intents API]
+Normalize[Signal Normalization Job]
 
-Entities[Entities API]
+DB[(Structured Knowledge Tables)]
 
-Tone[Tone API]
+Chat --> Classify
 
-Topics[Topics API]
+Classify -->|valuable| Extract
 
-%% JOB 3
-NormalizeJob[Job 3<br/>Data Normalization]
+Extract --> Facts
+Extract --> Intents
+Extract --> Entities
+Extract --> Tone
 
-%% DATABASE
-DB[(PostgreSQL)]
+Facts --> Aggregate
+Intents --> Aggregate
+Entities --> Aggregate
+Tone --> Aggregate
 
-User --> UI
-UI --> Dashboard
-Dashboard --> Chat
+Aggregate --> Normalize
 
-Chat --> API
-
-API --> ClassifyJob
-
-ClassifyJob -->|valuable message| AIService
-ClassifyJob -->|discard| API
-
-AIService --> Facts
-AIService --> Intents
-AIService --> Entities
-AIService --> Tone
-AIService --> Topics
-
-Facts --> NormalizeJob
-Intents --> NormalizeJob
-Entities --> NormalizeJob
-Tone --> NormalizeJob
-Topics --> NormalizeJob
-
-NormalizeJob --> DB
-
-
-%% COLORS
-
-classDef client fill:#dbeafe,stroke:#1e40af,color:#000
-classDef backend fill:#e9d5ff,stroke:#6b21a8,color:#000
-classDef ai fill:#dcfce7,stroke:#166534,color:#000
-classDef job fill:#fde68a,stroke:#92400e,color:#000
-classDef db fill:#fecaca,stroke:#991b1b,color:#000
-
-class User,UI,Dashboard,Chat client
-class API backend
-class ClassifyJob,NormalizeJob job
-class AIService,Facts,Intents,Entities,Tone,Topics ai
-class DB db
+Normalize --> DB
 ```
 
 
