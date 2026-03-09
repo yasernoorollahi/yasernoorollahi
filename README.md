@@ -134,6 +134,42 @@ Capabilities:
 - topic classification
 - message usefulness scoring
 
+
+## AI Signal Extraction Pipeline
+
+```mermaid
+flowchart TD
+
+Message[Incoming Message]
+
+Parser[Preprocessing]
+
+Extractor[Signal Extraction Engine]
+
+Facts[Facts Extraction]
+
+Intent[Intent Detection]
+
+Tone[Tone Analysis]
+
+Score[Message Scoring]
+
+Output[Structured AI Signals]
+
+Message --> Parser
+Parser --> Extractor
+
+Extractor --> Facts
+Extractor --> Intent
+Extractor --> Tone
+Extractor --> Score
+
+Facts --> Output
+Intent --> Output
+Tone --> Output
+Score --> Output
+```
+
 ### Service Architecture
 
 Controller Layer
