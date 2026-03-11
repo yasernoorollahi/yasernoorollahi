@@ -20,7 +20,6 @@ I’m particularly interested in roles involving AI-powered data platforms, back
 🔥 Check out my repositories here:  
 👉 https://github.com/yasernoorollahi?tab=repositories
 
-
 ---
 
 # What I Build
