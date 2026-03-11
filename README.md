@@ -15,6 +15,12 @@ Technically I work across the stack required to build and operate these systems,
 I’m particularly interested in roles involving AI-powered data platforms, backend infrastructure, and intelligent data processing systems.
 
 
+## 🚀 My Projects
+
+🔥 Check out my repositories here:  
+👉 https://github.com/yasernoorollahi?tab=repositories
+
+
 ---
 
 # What I Build
