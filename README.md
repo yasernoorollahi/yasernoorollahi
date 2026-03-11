@@ -1,10 +1,19 @@
 # Hi, I'm Yaser Noorollahi 👋
 
-Backend Engineer focused on building AI-powered platforms, asynchronous processing pipelines, and production-grade backend systems.
+I’m an AI systems and backend platform engineer who designs and builds production-grade intelligent systems that combine backend services, large language models, and cloud-native infrastructure.
 
-I enjoy designing systems that combine clean architecture, distributed processing, observability, and AI-driven signal extraction.
 
-Currently building a platform called Personal Data Platform (PDP).
+My work sits at the intersection of backend engineering, AI-powered processing, and platform infrastructure. I’m particularly interested in building systems that transform unstructured inputs into structured, actionable knowledge through multi-stage processing pipelines and domain-aware data models.
+
+
+I enjoy working on problems that involve system architecture, data modeling, and asynchronous processing pipelines — not just building APIs. My approach is to start from the data flow and system behavior, then design the services, jobs, and storage layers around it to produce reliable and structured outcomes.
+
+
+Technically I work across the stack required to build and operate these systems, including backend services, AI integrations, data pipelines, and production infrastructure. I also have experience working with Kubernetes platforms, observability stacks, and distributed system operations, which helps me design systems that are reliable, scalable, and observable in production.
+
+
+I’m particularly interested in roles involving AI-powered data platforms, backend infrastructure, and intelligent data processing systems.
+
 
 ---
 
