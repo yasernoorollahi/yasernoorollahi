@@ -23,7 +23,7 @@ I’m particularly interested in roles involving AI-powered data platforms, back
 
 ## Engineering Case Study
 A deep dive into the architecture and design decisions behind PDP.
-👉 [Read the Engineering Case Study](docs/engineering-case-study.md)
+👉 [Read the Engineering Case Study](https://github.com/yasernoorollahi/pdp/blob/main/docs/engineering-case-study.md)
 ---
 
 # What I Build
