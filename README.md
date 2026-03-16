@@ -43,6 +43,8 @@ Java • Spring Boot • PostgreSQL • Docker
 TypeScript • Fastify • React • Vite  
 Prometheus • Grafana • Redis
 
+
+https://github.com/yasernoorollahi/pdp/blob/58a046a8de5e296d62b3fc636a4fc022f01e5a13/docs/pdp_architecture_overview.png
 ---
 ## AI Signal Processing Pipeline
 
